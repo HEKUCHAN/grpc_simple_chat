@@ -10,10 +10,15 @@ import (
 	chatpb "golang_client/proto"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 func main() {
-	conn, err := grpc.Dial("localhost:50051", grpc.WithInsecure())
+	dialOpts := []grpc.DialOption{
+		grpc.WithTransportCredentials(insecure.NewCredentials()),
+	}
+
+	conn, err := grpc.NewClient("localhost:50051", dialOpts...)
 	if err != nil {
 		log.Fatalf("サーバーへの接続に失敗しました: %v", err)
 	}
