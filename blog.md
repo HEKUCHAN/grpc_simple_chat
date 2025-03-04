@@ -32,7 +32,7 @@ Protocol Buffersのドキュメント](https://protobuf.dev/reference/go/go-gene
 - [Pythonクライアント用に自動生成させたコード](https://github.com/HEKUCHAN/grpc_simple_chat/tree/main/apps/python_client/proto)
 - [Goクライアント用に自動生成させたコード](https://github.com/HEKUCHAN/grpc_simple_chat/tree/main/apps/golang_client/proto)
 
-コードを生成したら残り必要なのはそれぞれのプラットフォームの内部処理を実装することです。
+コードを生成した後に、必要なのはそれぞれのプラットフォームの内部処理を実装することです。
 
 ### gRPCサーバーの構築
 主に双方向ストリーミングを活用し、サーバーが受信したメッセージを自分以外のクライアントへ配信する仕組みにしています。
