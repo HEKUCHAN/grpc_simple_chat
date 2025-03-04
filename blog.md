@@ -47,11 +47,15 @@ Protocol Buffersのドキュメント](https://protobuf.dev/reference/go/go-gene
 サーバーとの接続が確立したのにユーザー名を入力してもらい、サーバーへのメッセージが送信できるようにしたり、サーバーから返ってきたメッセージをコンソールに表示する仕組みを実装しました。
 今後はここに認証用のトークン管理やユーザー情報の登録処理などを追加することで、より実運用に近いチャットクライアントに発展させることが可能だと思います。
 
+[該当コードページ](https://github.com/HEKUCHAN/grpc_simple_chat/tree/main/apps/golang_client)
+
 ### Python製のCLIクライアントの実装
 PythonクライアントはGoクライアントと大きく異なる部分はありません。
 同じ.protoファイルから生成されたコードを利用し、双方向ストリーミングを通じたメッセージ送受信を実現することができています。
 
 GoでもPythonでも、ベースにある通信仕様は同じProtocol Buffers定義に依拠しているため、言語が変わってもサーバーと問題なく通信できることが、gRPCの大きな強みというのを感じることができました。
+
+[該当コードページ](https://github.com/HEKUCHAN/grpc_simple_chat/tree/main/apps/python_client)
 
 ## 完成したもの
 左側 : Go言語で作成されたサーバー, 右下 : Python言語で作成されたクライアント, 右上 : Go言語で作成されたクライアント
