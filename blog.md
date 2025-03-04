@@ -56,7 +56,7 @@ GoでもPythonでも、ベースにある通信仕様は同じProtocol Buffers�
 ## 完成したもの
 左側 : Go言語で作成されたサーバー, 右下 : Python言語で作成されたクライアント, 右上 : Go言語で作成されたクライアント
 
-https://github.com/user-attachments/assets/6fc020cf-0857-4e78-959e-7ab5ac20d3b5
+https://github.com/user-attachments/assets/7d27bc5c-f4e1-4ce9-b55e-d94d2410309c
 
 ## 感想
 今回のCLI上で使えるチャットアプリ作成を通じて、gRPCの多言語対応の強みを実感することができました。特にProtocol Buffersを使用したコードの自動生成を使用することにより、Goでサーバーを実装しても、Python、Goでクライアントを実装しても、整合性が取れた状態で通信することができ、チーム開発などでもとても活躍すると思いました。
